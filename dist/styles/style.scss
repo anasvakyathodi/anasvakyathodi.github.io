@@ -63,11 +63,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    a{
-        color: inherit;
+    a {
+      color: inherit;
     }
     .title {
-    
       font-family: "Roboto Thin";
       text-decoration: none;
       font-size: 24px;
@@ -82,7 +81,7 @@ body {
       cursor: pointer;
       border-bottom: 8px solid $background-color;
       &:focus-within {
-        font-family: 'Roboto';
+        font-family: "Roboto";
         font-size: 24px;
         font-style: normal;
         font-weight: 400;
@@ -165,6 +164,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        flex-wrap: wrap;
         margin-bottom: 4rem;
         .title {
           font-family: "Roboto Thin";
@@ -419,5 +419,147 @@ body {
     line-height: 100.9%;
     padding: 2rem 0;
     color: $background-color;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  #navbar {
+    display: none;
+  }
+  #main {
+    .inner-container {
+      flex-direction: column-reverse;
+      .img-container {
+        background-position: center;
+        background-size: 100%;
+      }
+      .title-container {
+        background-position: center;
+        background-size: 90%;
+        max-height: 150px;
+      }
+    }
+    &:after {
+      display: none;
+    }
+  }
+  #about {
+    margin-top: 1rem;
+    padding: 1rem;
+    .inner-container {
+      padding: 0;
+      .about-me {
+        .title {
+          font-size: 1.25rem;
+        }
+        .description {
+          font-size: 1rem;
+        }
+      }
+      .tabs {
+        .tab-header {
+          margin-bottom: 1rem;
+          .title {
+            font-size: 1rem;
+            font-style: normal;
+            text-align: center;
+            border-bottom: 5px solid $background-color;
+            &:focus {
+              font-size: 1rem;
+            }
+            &:hover {
+              border-bottom: 5px solid $primary-color;
+            }
+          }
+        }
+        .tab-item {
+          .content {
+            margin: 1rem;
+            .title {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  #works {
+    &:after {
+      display: none;
+    }
+    .inner-container {
+      padding: 0;
+      .title {
+        font-size: 1.25rem;
+      }
+      .content {
+        .item {
+          flex-direction: column;
+          margin: 0;
+          .img-container {
+            display: none;
+          }
+          .desc {
+            padding: 1rem;
+            .title {
+              font-size: 1.25rem;
+              letter-spacing: 0.5rem;
+            }
+            .subtitle,
+            .description,
+            .technologies {
+              font-size: 1rem;
+              margin-bottom: 1rem;
+            }
+          }
+        }
+        .btn-more {
+          padding: 1rem 2rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  #contact {
+    &:after {
+      display: none;
+    }
+    .inner-container {
+      .title {
+        font-size: 1.25rem;
+      }
+      padding: 0;
+      form {
+        padding: 0;
+        margin: 0;
+        input,
+        textarea {
+          margin: 0.5rem 1rem;
+          font-size: 1rem;
+          &:placeholder {
+            font-size: 1rem;
+          }
+        }
+      }
+      .social-links {
+        .title {
+          margin-top: 1rem;
+          font-size: 1.25rem;
+        }
+        .links {
+          a {
+            width: 40px;
+            height: 40px;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  .footer{
+      background: $primary-color;
+      .inner-container{
+          font-size: 1rem;
+      }
   }
 }

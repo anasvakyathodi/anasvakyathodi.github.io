@@ -67,7 +67,7 @@ body {
 }
 
 #navbar .nav-header .title:focus-within {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -184,6 +184,8 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 4rem;
 }
 
@@ -561,5 +563,136 @@ body {
   line-height: 100.9%;
   padding: 2rem 0;
   color: #ffffff;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  #navbar {
+    display: none;
+  }
+  #main .inner-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #main .inner-container .img-container {
+    background-position: center;
+    background-size: 100%;
+  }
+  #main .inner-container .title-container {
+    background-position: center;
+    background-size: 90%;
+    max-height: 150px;
+  }
+  #main:after {
+    display: none;
+  }
+  #about {
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+  #about .inner-container {
+    padding: 0;
+  }
+  #about .inner-container .about-me .title {
+    font-size: 1.25rem;
+  }
+  #about .inner-container .about-me .description {
+    font-size: 1rem;
+  }
+  #about .inner-container .tabs .tab-header {
+    margin-bottom: 1rem;
+  }
+  #about .inner-container .tabs .tab-header .title {
+    font-size: 1rem;
+    font-style: normal;
+    text-align: center;
+    border-bottom: 5px solid #ffffff;
+  }
+  #about .inner-container .tabs .tab-header .title:focus {
+    font-size: 1rem;
+  }
+  #about .inner-container .tabs .tab-header .title:hover {
+    border-bottom: 5px solid #3bbbe8;
+  }
+  #about .inner-container .tabs .tab-item .content {
+    margin: 1rem;
+  }
+  #about .inner-container .tabs .tab-item .content .title {
+    font-size: 1rem;
+  }
+  #works:after {
+    display: none;
+  }
+  #works .inner-container {
+    padding: 0;
+  }
+  #works .inner-container .title {
+    font-size: 1.25rem;
+  }
+  #works .inner-container .content .item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+  }
+  #works .inner-container .content .item .img-container {
+    display: none;
+  }
+  #works .inner-container .content .item .desc {
+    padding: 1rem;
+  }
+  #works .inner-container .content .item .desc .title {
+    font-size: 1.25rem;
+    letter-spacing: 0.5rem;
+  }
+  #works .inner-container .content .item .desc .subtitle,
+  #works .inner-container .content .item .desc .description,
+  #works .inner-container .content .item .desc .technologies {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  #works .inner-container .content .btn-more {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  #contact:after {
+    display: none;
+  }
+  #contact .inner-container {
+    padding: 0;
+  }
+  #contact .inner-container .title {
+    font-size: 1.25rem;
+  }
+  #contact .inner-container form {
+    padding: 0;
+    margin: 0;
+  }
+  #contact .inner-container form input,
+  #contact .inner-container form textarea {
+    margin: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  #contact .inner-container form input:placeholder,
+  #contact .inner-container form textarea:placeholder {
+    font-size: 1rem;
+  }
+  #contact .inner-container .social-links .title {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+  }
+  #contact .inner-container .social-links .links a {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  .footer {
+    background: #3bbbe8;
+  }
+  .footer .inner-container {
+    font-size: 1rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
