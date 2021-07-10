@@ -686,10 +686,17 @@ body {
   #contact .inner-container form input,
   #contact .inner-container form textarea {
     margin: 0.5rem 1rem;
+    border-radius: 10px;
+    border: 1px solid #3bbbe8;
     font-size: 1rem;
   }
   #contact .inner-container form input:placeholder,
   #contact .inner-container form textarea:placeholder {
+    font-size: 1rem;
+  }
+  #contact .inner-container form input[type="submit"],
+  #contact .inner-container form textarea[type="submit"] {
+    background: #3bbbe8;
     font-size: 1rem;
   }
   #contact .inner-container .social-links .title {

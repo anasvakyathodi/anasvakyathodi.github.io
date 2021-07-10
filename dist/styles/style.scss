@@ -545,9 +545,16 @@ body {
         input,
         textarea {
           margin: 0.5rem 1rem;
+          border-radius: 10px;
+          border: 1px solid $primary-color;
           font-size: 1rem;
           &:placeholder {
             font-size: 1rem;
+          }
+          &[type="submit"]{
+              background: $primary-color;
+              font-size: 1rem;
+              
           }
         }
       }
