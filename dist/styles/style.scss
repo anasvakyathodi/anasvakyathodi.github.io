@@ -447,6 +447,9 @@ body {
     margin-top: 1rem;
     padding: 1rem;
     .inner-container {
+        &:hover{
+            box-shadow: none;
+        }
       padding: 0;
       .about-me {
         .title {
@@ -488,6 +491,9 @@ body {
       display: none;
     }
     .inner-container {
+        &:hover{
+            box-shadow: none;
+        }
       padding: 0;
       .title {
         font-size: 1.25rem;
@@ -525,6 +531,9 @@ body {
       display: none;
     }
     .inner-container {
+        &:hover{
+            box-shadow: none;
+        }
       .title {
         font-size: 1.25rem;
       }

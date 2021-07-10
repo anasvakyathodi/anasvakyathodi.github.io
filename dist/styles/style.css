@@ -594,6 +594,10 @@ body {
   #about .inner-container {
     padding: 0;
   }
+  #about .inner-container:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
   #about .inner-container .about-me .title {
     font-size: 1.25rem;
   }
@@ -626,6 +630,10 @@ body {
   }
   #works .inner-container {
     padding: 0;
+  }
+  #works .inner-container:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   #works .inner-container .title {
     font-size: 1.25rem;
@@ -662,6 +670,10 @@ body {
   }
   #contact .inner-container {
     padding: 0;
+  }
+  #contact .inner-container:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   #contact .inner-container .title {
     font-size: 1.25rem;
