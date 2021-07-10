@@ -542,7 +542,7 @@ body {
   position: absolute;
   z-index: -1;
   overflow: hidden;
-  top: 580%;
+  top: 588%;
   background: #3bbbe8;
   border-radius: 100% 0% 100% 0% / 100% 100% 0% 0%;
   right: 0;
@@ -560,5 +560,6 @@ body {
   font-size: 24px;
   line-height: 100.9%;
   padding: 2rem 0;
+  color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */
