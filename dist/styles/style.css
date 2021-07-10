@@ -609,6 +609,7 @@ body {
   }
   #about .inner-container .tabs .tab-header .title {
     font-size: 1rem;
+    font-weight: bold;
     font-style: normal;
     text-align: center;
     border-bottom: 5px solid #ffffff;

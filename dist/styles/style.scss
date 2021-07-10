@@ -448,7 +448,7 @@ body {
     padding: 1rem;
     .inner-container {
         &:hover{
-            box-shadow: none;
+            box-shadow:none;
         }
       padding: 0;
       .about-me {
@@ -464,6 +464,7 @@ body {
           margin-bottom: 1rem;
           .title {
             font-size: 1rem;
+            font-weight: bold;
             font-style: normal;
             text-align: center;
             border-bottom: 5px solid $background-color;
