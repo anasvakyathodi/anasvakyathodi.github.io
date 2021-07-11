@@ -80,17 +80,17 @@ body {
       border: none;
       cursor: pointer;
       border-bottom: 5px solid $background-color;
-      &:focus-within {
+      &:hover {
+        border-bottom: 5px solid $primary-color;
+      }
+      .active {
         font-family: "Roboto";
         font-size: 1.2rem;
         font-style: normal;
-        font-weight: 400;
+        font-weight: bolder;
         line-height: 150%;
         letter-spacing: 0em;
         text-align: center;
-      }
-      &:hover {
-        border-bottom: 5px solid $primary-color;
       }
     }
   }

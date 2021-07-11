@@ -66,18 +66,18 @@ body {
   border-bottom: 5px solid #ffffff;
 }
 
-#navbar .nav-header .title:focus-within {
+#navbar .nav-header .title:hover {
+  border-bottom: 5px solid #3bbbe8;
+}
+
+#navbar .nav-header .title .active {
   font-family: "Roboto";
   font-size: 1.2rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: bolder;
   line-height: 150%;
   letter-spacing: 0em;
   text-align: center;
-}
-
-#navbar .nav-header .title:hover {
-  border-bottom: 5px solid #3bbbe8;
 }
 
 #main .inner-container {

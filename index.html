@@ -14,7 +14,7 @@
   <body>
     <div id="navbar">
       <div class="nav-header">
-        <a class="title" href="#main">
+        <a class="title active" href="#main">
           HOME
         </a>
         <a class="title" href="#about">ABOUT</a>
@@ -226,7 +226,7 @@
  <div id="contact">
       <div class="inner-container">
         <div class="title">CONTACT ME</div>
-        <form action="" method="post">
+        <form name="messageForm" onsubmit="return handleSubmit()">
           <input type="text" name="name" placeholder="NAME" id="name" />
           <input type="email" name="email" placeholder="EMAIL" id="email" />
           <input
@@ -242,7 +242,7 @@
             rows="10"
             placeholder="MESSAGE"
           ></textarea>
-          <input type="submit" value="send message" />
+          <input type="submit" name="submit-btn" value="send message" />
         </form>
         <div class="social-links">
           <div class="title">SOCIAL LINKS</div>
