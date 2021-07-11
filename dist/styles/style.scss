@@ -122,7 +122,7 @@ body {
     overflow: hidden;
     position: absolute;
     top: 80%;
-    z-index: 10;
+    z-index: 1;
     width: 100%;
     height: 100%;
     background: url("./../vectors/main-bg.svg") no-repeat center;
@@ -132,8 +132,9 @@ body {
 #about {
   height: 100%;
   min-height: 100vh;
-  margin-top: 35%;
+  margin-top: 30%;
   margin-bottom: 5rem;
+  z-index: 2;
   .inner-container {
     @include card();
     .about-me {
@@ -415,7 +416,7 @@ body {
     position: absolute;
     z-index: -1;
     overflow: hidden;
-    top: 543%;
+    top: 530%;
     background: #3bbbe8;
     border-radius: 100% 0% 100% 0% / 100% 100% 0% 0%;
     right: 0;
