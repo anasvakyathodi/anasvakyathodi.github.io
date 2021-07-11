@@ -53,9 +53,9 @@ body {
 #navbar .nav-header .title {
   font-family: "Roboto Thin";
   text-decoration: none;
-  font-size: 24px;
+  font-size: 1.2rem;
   font-style: normal;
-  font-weight: 300;
+  font-weight: bold;
   line-height: 150%;
   letter-spacing: 0;
   text-align: center;
@@ -63,12 +63,12 @@ body {
   outline: none;
   border: none;
   cursor: pointer;
-  border-bottom: 8px solid #ffffff;
+  border-bottom: 5px solid #ffffff;
 }
 
 #navbar .nav-header .title:focus-within {
   font-family: "Roboto";
-  font-size: 24px;
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
@@ -77,7 +77,7 @@ body {
 }
 
 #navbar .nav-header .title:hover {
-  border-bottom: 8px solid #3bbbe8;
+  border-bottom: 5px solid #3bbbe8;
 }
 
 #main .inner-container {
@@ -129,7 +129,7 @@ body {
   border-radius: 10px;
   width: 100%;
   margin: auto;
-  max-width: 1217px;
+  max-width: 700px;
   padding: 4rem;
 }
 
@@ -144,18 +144,18 @@ body {
 
 #about .inner-container .about-me .title {
   font-family: "Roboto Black";
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 400;
   line-height: 100%;
-  letter-spacing: 0.6em;
+  letter-spacing: 0.3em;
   text-align: center;
   margin-bottom: 4rem;
 }
 
 #about .inner-container .about-me .description {
   font-family: Roboto;
-  font-size: 24px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 400;
   line-height: 43px;
@@ -191,7 +191,7 @@ body {
 
 #about .inner-container .tabs .tab-header .title {
   font-family: "Roboto Thin";
-  font-size: 24px;
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 300;
   line-height: 150%;
@@ -201,12 +201,12 @@ body {
   outline: none;
   border: none;
   cursor: pointer;
-  border-bottom: 8px solid #ffffff;
+  border-bottom: 5px solid #ffffff;
 }
 
 #about .inner-container .tabs .tab-header .title:focus {
   font-family: Roboto;
-  font-size: 24px;
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
@@ -215,7 +215,7 @@ body {
 }
 
 #about .inner-container .tabs .tab-header .title:hover {
-  border-bottom: 8px solid #3bbbe8;
+  border-bottom: 5px solid #3bbbe8;
 }
 
 #about .inner-container .tabs .tab-item .content {
@@ -226,8 +226,12 @@ body {
   font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 42px;
+}
+
+#about .inner-container .tabs .tab-item .content .description {
+  font-size: 1rem;
 }
 
 #works {
@@ -241,7 +245,7 @@ body {
   border-radius: 10px;
   width: 100%;
   margin: auto;
-  max-width: 1217px;
+  max-width: 700px;
   padding: 4rem;
   margin: auto;
 }
@@ -253,11 +257,11 @@ body {
 
 #works .inner-container .title {
   font-family: "Roboto Black";
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 400;
   line-height: 100%;
-  letter-spacing: 0.6em;
+  letter-spacing: 0.3em;
   text-align: center;
   margin-bottom: 4rem;
 }
@@ -279,10 +283,12 @@ body {
 
 #works .inner-container .content .item .img-container {
   background-color: #3bbbe8;
-  border-radius: 28px;
+  border-radius: 10px;
   height: 300px;
   width: 50%;
-  max-width: 500px;
+  max-width: 250px;
+  -webkit-box-shadow: inset 38px 38px 70px #329dc3, inset -38px -38px 70px #44d9ff;
+          box-shadow: inset 38px 38px 70px #329dc3, inset -38px -38px 70px #44d9ff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -295,14 +301,14 @@ body {
 }
 
 #works .inner-container .content .item .img-container:hover {
-  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 #works .inner-container .content .item .img-container .logo {
   color: #ffffff;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 #works .inner-container .content .item .desc {
@@ -311,9 +317,7 @@ body {
 
 #works .inner-container .content .item .desc .title {
   font-family: "Roboto";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 100%;
   text-align: left;
   margin-bottom: 1rem;
@@ -326,7 +330,7 @@ body {
   font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 1rem;
   line-height: 136%;
   margin-bottom: 1rem;
 }
@@ -336,20 +340,22 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   border-radius: 10px;
-  padding: 35px 90px;
+  padding: 1rem 2rem;
   font-family: "Roboto";
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1rem;
   line-height: 100%;
   outline: none;
   border: none;
   cursor: pointer;
+  -webkit-box-shadow: inset 20px 20px 40px #34a5cc, inset -20px -20px 40px #42d1ff;
+          box-shadow: inset 20px 20px 40px #34a5cc, inset -20px -20px 40px #42d1ff;
 }
 
 #works .inner-container .content .btn-more:hover {
-  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 #works:after {
@@ -376,7 +382,7 @@ body {
   border-radius: 10px;
   width: 100%;
   margin: auto;
-  max-width: 1217px;
+  max-width: 700px;
   padding: 4rem;
 }
 
@@ -387,11 +393,11 @@ body {
 
 #contact .inner-container .title {
   font-family: "Roboto Black";
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 400;
   line-height: 100%;
-  letter-spacing: 0.6em;
+  letter-spacing: 0.3em;
   text-align: center;
   margin-bottom: 4rem;
   margin-bottom: 2rem;
@@ -406,7 +412,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  max-width: 609px;
+  max-width: 500px;
   margin: auto;
 }
 
@@ -416,9 +422,9 @@ body {
   border-radius: 10px;
   outline: none;
   border: none;
-  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  font-size: 1.5rem;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
   line-height: 200%;
   text-align: center;
   font-family: "Roboto";
@@ -446,7 +452,14 @@ body {
 #contact .inner-container form input[type="submit"] {
   background: #3bbbe8;
   color: #ffffff;
+  -webkit-box-shadow: inset 20px 20px 40px #34a5cc, inset -20px -20px 40px #42d1ff;
+          box-shadow: inset 20px 20px 40px #34a5cc, inset -20px -20px 40px #42d1ff;
   text-transform: uppercase;
+}
+
+#contact .inner-container form input[type="submit"]:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 #contact .inner-container form textarea {
@@ -454,11 +467,11 @@ body {
   border-radius: 10px;
   outline: none;
   border: none;
-  height: 416px;
-  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  height: 300px;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   resize: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 200%;
   text-align: center;
   font-family: "Roboto";
@@ -497,7 +510,7 @@ body {
   font-family: "Roboto";
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.2rem;
   line-height: 100%;
   color: rgba(0, 0, 0, 0.3);
 }
@@ -519,11 +532,13 @@ body {
 }
 
 #contact .inner-container .social-links .links a {
-  height: 60px;
-  width: 60px;
-  font-size: 2rem;
+  height: 40px;
+  width: 40px;
+  font-size: 1.2rem;
   border-radius: 50%;
   background: #3bbbe8;
+  -webkit-box-shadow: inset 20px 20px 40px #34a5cc, inset -20px -20px 40px #42d1ff;
+          box-shadow: inset 20px 20px 40px #34a5cc, inset -20px -20px 40px #42d1ff;
   color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -537,6 +552,11 @@ body {
   text-decoration: none;
 }
 
+#contact .inner-container .social-links .links a:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 #contact:after {
   content: "";
   width: 2000px;
@@ -544,7 +564,7 @@ body {
   position: absolute;
   z-index: -1;
   overflow: hidden;
-  top: 588%;
+  top: 543%;
   background: #3bbbe8;
   border-radius: 100% 0% 100% 0% / 100% 100% 0% 0%;
   right: 0;
@@ -569,6 +589,11 @@ body {
   #navbar {
     display: none;
   }
+  #main {
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
   #main .inner-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -590,6 +615,7 @@ body {
   #about {
     margin-top: 1rem;
     padding: 1rem;
+    margin-bottom: 0;
   }
   #about .inner-container {
     padding: 0;
@@ -620,11 +646,17 @@ body {
   #about .inner-container .tabs .tab-header .title:hover {
     border-bottom: 5px solid #3bbbe8;
   }
+  #about .inner-container .tabs .tab-item {
+    margin: 0;
+  }
   #about .inner-container .tabs .tab-item .content {
-    margin: 1rem;
+    margin: 0;
   }
   #about .inner-container .tabs .tab-item .content .title {
     font-size: 1rem;
+  }
+  #works {
+    margin-bottom: 1rem;
   }
   #works:after {
     display: none;
@@ -688,6 +720,8 @@ body {
     margin: 0.5rem 1rem;
     border-radius: 10px;
     border: 1px solid #3bbbe8;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     font-size: 1rem;
   }
   #contact .inner-container form input:placeholder,
@@ -698,6 +732,8 @@ body {
   #contact .inner-container form textarea[type="submit"] {
     background: #3bbbe8;
     font-size: 1rem;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   #contact .inner-container .social-links .title {
     margin-top: 1rem;
