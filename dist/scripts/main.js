@@ -23,11 +23,12 @@ const toggleWork = () => {
 const handleSubmit = () => {
   try {
     let form = document.getElementsByName("messageForm");
+    let newline = String.fromCharCode(13, 10);
     let message = "";
     message += "name: " + form[0].elements["name"].value;
-    message += "\temail: " + form[0].elements["email"].value;
-    message += "\tsubject: " + form[0].elements["subject"].value;
-    message += "\tmessage: " + form[0].elements["message"].value;
+    message += newline + ",email: " + form[0].elements["email"].value;
+    message += newline + ",subject: " + form[0].elements["subject"].value;
+    message += newline + ",message: " + form[0].elements["message"].value;
     form[0].elements["name"].value = "";
     form[0].elements["email"].value = "";
     form[0].elements["subject"].value = "";
