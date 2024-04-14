@@ -37,15 +37,18 @@ $color: #fff;
 @font-face {
   font-family: "Roboto";
   src: url("./../fonts/Roboto/Roboto-Regular.ttf");
+  font-display: fallback;
 }
 
 @font-face {
   font-family: "Roboto Black";
   src: url("./../fonts/Roboto/Roboto-Black.ttf");
+  font-display: fallback;
 }
 @font-face {
   font-family: "Roboto Thin";
   src: url("./../fonts/Roboto/Roboto-Thin.ttf");
+  font-display: fallback;
 }
 @font-face {
   font-family: "Sansation Light";
@@ -60,6 +63,7 @@ $color: #fff;
       format("truetype"),
     url("https://db.onlinewebfonts.com/t/a163d087c4bfdff182eb1b4fcc595798.svg#Sansation Light")
       format("svg");
+  font-display: fallback;
 }
 // #header {}
 
