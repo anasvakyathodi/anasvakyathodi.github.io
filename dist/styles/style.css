@@ -81,7 +81,7 @@ body {
   height: 100vh;
 }
 #main .inner-container .img-container {
-  background: url("./../vectors/hero-bg.png");
+  background: url("./../vectors/hero-bg.webp");
   background-size: cover;
   background-repeat: no-repeat; /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio website of Anas Vakyathodi" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -21,21 +22,41 @@
       sizes="16x16"
       href="dist/images/favicon-16x16.png"
     />
+
     <link rel="manifest" href="dist/site.webmanifest" />
+    <link rel="stylesheet" href="/dist/styles/font-awesome.min.css" />
+    <link rel="stylesheet" href="/dist/styles/style.min.css" />
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="preload"
+      fetchpriority="high"
+      as="image"
+      href="/dist/vectors/hero-bg.webp"
+      type="image/webp"
     />
-    <link rel="stylesheet" href="/dist/styles/style.css" />
     <title>Portfolio | Anas Vakyathodi</title>
   </head>
   <body>
     <div id="navbar">
       <div class="nav-header">
-        <a class="title active" href="#main"> HOME </a>
-        <a class="title" href="#about">ABOUT</a>
-        <a class="title" href="#works">WORKS</a>
-        <a class="title" href="#contact">CONTACT</a>
+        <a
+          class="title active"
+          aria-label="Navigate to main section"
+          href="#main"
+        >
+          HOME
+        </a>
+        <a class="title" aria-label="Navigate to about section" href="#about"
+          >ABOUT</a
+        >
+        <a class="title" aria-label="Navigate to works section" href="#works"
+          >WORKS</a
+        >
+        <a
+          class="title"
+          aria-label="Navigate to contact section"
+          href="#contact"
+          >CONTACT</a
+        >
       </div>
     </div>
     <div id="stars"></div>
@@ -159,7 +180,7 @@
           <div class="item">
             <div class="img-container">
               <img
-                src="./dist/images/mako.png"
+                src="./dist/images/mako.webp"
                 alt="mako-logo"
                 width="150"
                 height="150"
@@ -279,16 +300,28 @@
         <div class="social-links">
           <div class="title">SOCIAL LINKS</div>
           <div class="links">
-            <a href="https://wa.link/gizl2e">
+            <a
+              aria-label="Navigate to whatsapp link"
+              href="https://wa.link/gizl2e"
+            >
               <i class="fab fa-whatsapp"></i>
             </a>
-            <a href="https://www.linkedin.com/in/anasvakyathodi">
+            <a
+              aria-label="Navigate to linkedin link"
+              href="https://www.linkedin.com/in/anasvakyathodi"
+            >
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="https://github.com/anasvakyathodi">
+            <a
+              aria-label="Navigate to github link"
+              href="https://github.com/anasvakyathodi"
+            >
               <i class="fab fa-github"></i>
             </a>
-            <a href="https://instagram.com/anas_vakyathodi">
+            <a
+              aria-label="Navigate to instagram link"
+              href="https://instagram.com/anas_vakyathodi"
+            >
               <i class="fab fa-instagram"></i>
             </a>
           </div>
