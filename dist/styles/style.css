@@ -490,11 +490,17 @@ body {
   #main .inner-container .img-container {
     background-position: center;
     background-size: 100%;
+    background-position: center bottom;
   }
   #main .inner-container .title-container {
     background-position: center;
     background-size: 90%;
-    max-height: 150px;
+    max-height: 100px;
+    font-size: 0.75rem;
+    align-items: flex-end;
+  }
+  #main .inner-container .title-container .typed {
+    margin-left: 10%;
   }
   #main:after {
     display: none;
