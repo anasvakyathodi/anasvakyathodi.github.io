@@ -487,6 +487,7 @@ body {
         background-position: center bottom;
       }
       .title-container {
+        margin-top: 10%;
         background-position: center;
         background-size: 90%;
         max-height: 100px;
@@ -509,7 +510,7 @@ body {
       &:hover {
         box-shadow: none;
       }
-      padding: 0;
+      padding: 1rem 0.3rem;
       .about-me {
         .title {
           font-size: 1.25rem;
@@ -538,7 +539,7 @@ body {
           }
         }
         .tab-item {
-          margin: 0;
+          margin: 0.5rem;
           .content {
             margin: 0;
             .title {
@@ -551,6 +552,7 @@ body {
   }
   #works {
     margin-bottom: 1rem;
+    padding: 1rem;
     &:after {
       display: none;
     }
@@ -558,7 +560,7 @@ body {
       &:hover {
         box-shadow: none;
       }
-      padding: 0;
+      padding: 1rem 0.3rem;
       .title {
         font-size: 1.25rem;
       }
@@ -591,6 +593,7 @@ body {
     }
   }
   #contact {
+    padding: 1rem;
     &:after {
       display: none;
     }
@@ -601,7 +604,7 @@ body {
       .title {
         font-size: 1.25rem;
       }
-      padding: 0;
+      padding: 1rem 0.3rem;
       form {
         padding: 0;
         margin: 0;

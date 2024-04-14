@@ -493,6 +493,7 @@ body {
     background-position: center bottom;
   }
   #main .inner-container .title-container {
+    margin-top: 10%;
     background-position: center;
     background-size: 90%;
     max-height: 100px;
@@ -511,7 +512,7 @@ body {
     margin-bottom: 0;
   }
   #about .inner-container {
-    padding: 0;
+    padding: 1rem 0.3rem;
   }
   #about .inner-container:hover {
     box-shadow: none;
@@ -540,7 +541,7 @@ body {
     border-bottom: 5px solid #ffd8e6;
   }
   #about .inner-container .tabs .tab-item {
-    margin: 0;
+    margin: 0.5rem;
   }
   #about .inner-container .tabs .tab-item .content {
     margin: 0;
@@ -550,12 +551,13 @@ body {
   }
   #works {
     margin-bottom: 1rem;
+    padding: 1rem;
   }
   #works:after {
     display: none;
   }
   #works .inner-container {
-    padding: 0;
+    padding: 1rem 0.3rem;
   }
   #works .inner-container:hover {
     box-shadow: none;
@@ -587,11 +589,14 @@ body {
     padding: 1rem 2rem;
     font-size: 1rem;
   }
+  #contact {
+    padding: 1rem;
+  }
   #contact:after {
     display: none;
   }
   #contact .inner-container {
-    padding: 0;
+    padding: 1rem 0.3rem;
   }
   #contact .inner-container:hover {
     box-shadow: none;
