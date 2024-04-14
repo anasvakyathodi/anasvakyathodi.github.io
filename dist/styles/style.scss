@@ -47,6 +47,20 @@ $color: #fff;
   font-family: "Roboto Thin";
   src: url("./../fonts/Roboto/Roboto-Thin.ttf");
 }
+@font-face {
+  font-family: "Sansation Light";
+  src: url("https://db.onlinewebfonts.com/t/a163d087c4bfdff182eb1b4fcc595798.eot");
+  src: url("https://db.onlinewebfonts.com/t/a163d087c4bfdff182eb1b4fcc595798.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/a163d087c4bfdff182eb1b4fcc595798.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/a163d087c4bfdff182eb1b4fcc595798.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/a163d087c4bfdff182eb1b4fcc595798.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/a163d087c4bfdff182eb1b4fcc595798.svg#Sansation Light")
+      format("svg");
+}
 // #header {}
 
 .hidden {
@@ -141,6 +155,9 @@ body {
       .typed {
         margin-left: 17%;
       }
+    }
+    .quote {
+      display: none;
     }
   }
   &:after {
@@ -478,7 +495,6 @@ body {
     display: none;
   }
   #main {
-    min-height: fit-content;
     .inner-container {
       flex-direction: column-reverse;
       .img-container {
@@ -497,6 +513,20 @@ body {
           margin-left: 10%;
         }
       }
+      .quote {
+        display: block;
+        font-style: italic;
+        color: $primary-container;
+        margin: 10rem 1rem auto;
+        font-family: "Sansation Light";
+        line-height: 150%;
+        letter-spacing: 2px;
+        font-size: 14px;
+        text-align: left;
+        .author {
+          text-align: right;
+        }
+      }
     }
     &:after {
       display: none;
@@ -506,6 +536,7 @@ body {
     margin-top: 1rem;
     padding: 1rem;
     margin-bottom: 0;
+    min-height: auto;
     .inner-container {
       &:hover {
         box-shadow: none;
@@ -553,6 +584,7 @@ body {
   #works {
     margin-bottom: 1rem;
     padding: 1rem;
+    min-height: auto;
     &:after {
       display: none;
     }
@@ -594,6 +626,7 @@ body {
   }
   #contact {
     padding: 1rem;
+    min-height: auto;
     &:after {
       display: none;
     }
