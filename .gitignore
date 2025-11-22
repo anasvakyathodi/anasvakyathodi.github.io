@@ -1,0 +1,6 @@
+portfolio-api/
+.DS_Store
+node_modules/
+.vercel/
+.env
+.env.local
