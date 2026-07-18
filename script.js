@@ -31,7 +31,7 @@ let historyIndex = -1;
 // Resume data for LLM context
 const resumeData = {
     name: "Mohamed Anas VT",
-    role: "Senior Software Engineer",
+    role: "Lead Engineer",
     email: "anasvakyathodi@gmail.com",
     phone: "+91 9656551078",
     location: "Kerala, India",
@@ -53,11 +53,11 @@ const resumeData = {
     ],
     experience: [
         {
-            role: "Software Developer Engineer",
+            role: "Lead Engineer",
             company: "Highlevel",
             duration: "Sep 2022 - Present",
             location: "Remote",
-            description: "Leading development of AI-powered email template generation, analytics dashboards, and branding tools. Building systems for template sharing and email performance tracking."
+            description: "Progressed from SDE to Lead Engineer. Leading development of AI-powered email template generation, analytics dashboards, and branding tools. Building systems for template sharing and email performance tracking."
         },
         {
             role: "Full Stack Developer Intern",
