@@ -90,6 +90,51 @@ const resumeData = {
             description: "Marketing analytics platform integrating multiple advertising platforms"
         }
     ],
+    extensions: [
+        {
+            name: "Citely",
+            version: "1.0.0",
+            users: 2,
+            url: "https://chromewebstore.google.com/detail/nbhcjnhaikhhjcpcpgfbikdegadmbaln",
+            description: "AI Search visibility audit — analyze how your site shows up in AI-powered search results"
+        },
+        {
+            name: "Replr",
+            version: "1.0.0",
+            users: 2,
+            rating: 5,
+            url: "https://chromewebstore.google.com/detail/mimmbhcdmnlcbcmdcoaoaoaenifmbldi",
+            description: "AI-drafted LinkedIn messages — context-aware replies and outreach inside LinkedIn"
+        },
+        {
+            name: "Verbex",
+            version: "1.0.0",
+            users: 11,
+            rating: 5,
+            url: "https://chromewebstore.google.com/detail/dgioacefjlabmiglebdkejblocflhahi",
+            description: "YouTube Transcript Exporter — grab full video transcripts in one click"
+        },
+        {
+            name: "Folio",
+            version: "0.4.0",
+            users: 11,
+            url: "https://chromewebstore.google.com/detail/floedamdhiaahnipjhomekibenklinok",
+            description: "PDF editor in the browser — view, annotate, and edit PDFs without leaving Chrome"
+        },
+        {
+            name: "Krumb",
+            version: "1.0.0",
+            users: 1,
+            url: "https://chromewebstore.google.com/detail/aipcolidojbgfjodidmloekakimgiild",
+            description: "Auto-rejects cookie banners on every site. Open-source. Zero tracking"
+        },
+        {
+            name: "Email Builder Tools",
+            version: "2.2.0",
+            users: 14,
+            description: "Private extension used internally for email builder dev actions"
+        }
+    ],
     skills: {
         frontend: ["Vue.js", "Nuxt.js", "React.js", "Handlebars", "Tailwind CSS", "Material UI", "Bootstrap", "GraphQL", "Webpack"],
         backend: ["Node.js", "Nest.js", "LangChain", "LangGraph"],
@@ -106,6 +151,7 @@ const commands = {
   <strong>about</strong>      - Display information about me
   <strong>skills</strong>     - List my technical skills
   <strong>projects</strong>   - Show my featured projects
+  <strong>extensions</strong> - List my Chrome extensions
   <strong>experience</strong> - Display work experience
   <strong>education</strong>  - Show educational background
   <strong>contact</strong>    - Get my contact information
@@ -148,6 +194,21 @@ innovating in the email template generation, analytics, and branding space at Hi
         let output = '<strong>Featured Projects:</strong>\n\n';
         resumeData.projects.forEach((project, index) => {
             output += `<strong>${index + 1}. ${project.name}</strong>\n   ${project.description}\n\n`;
+        });
+        return output;
+    },
+
+    extensions: () => {
+        let output = '<strong>Chrome Extensions:</strong>\n\n';
+        resumeData.extensions.forEach((ext, index) => {
+            const stats = [`v${ext.version}`, `${ext.users} user${ext.users === 1 ? '' : 's'}`];
+            if (ext.rating) {
+                stats.unshift(`★ ${ext.rating.toFixed(1)}`);
+            }
+            const name = ext.url
+                ? `<a href="${ext.url}" target="_blank">${ext.name}</a>`
+                : ext.name;
+            output += `<strong>${index + 1}. ${name}</strong> (${stats.join(' | ')})\n   ${ext.description}\n\n`;
         });
         return output;
     },
@@ -248,7 +309,9 @@ async function callLLMAPI(userInput) {
         // Fallback to keyword matching if API fails
         const input = userInput.toLowerCase();
 
-        if (input.includes('project') || input.includes('built') || input.includes('work on')) {
+        if (input.includes('extension') || input.includes('chrome')) {
+            return commands.extensions();
+        } else if (input.includes('project') || input.includes('built') || input.includes('work on')) {
             return commands.projects();
         } else if (input.includes('skill') || input.includes('technology') || input.includes('know')) {
             return commands.skills();
@@ -372,18 +435,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Active nav highlighting
+// Active nav highlighting + header state + scroll progress
 const navLinks = document.querySelectorAll('nav a');
 const sections = document.querySelectorAll('section[id]');
+const siteHeader = document.getElementById('siteHeader');
+const scrollProgress = document.getElementById('scrollProgress');
 
-window.addEventListener('scroll', () => {
+let scrollTicking = false;
+
+function onScroll() {
     let current = '';
 
     sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-
-        if (window.pageYOffset >= sectionTop - 100) {
+        if (window.pageYOffset >= section.offsetTop - 100) {
             current = section.getAttribute('id');
         }
     });
@@ -394,31 +458,52 @@ window.addEventListener('scroll', () => {
             link.classList.add('active');
         }
     });
+
+    if (siteHeader) {
+        siteHeader.classList.toggle('scrolled', window.pageYOffset > 40);
+    }
+
+    if (scrollProgress) {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = scrollable > 0 ? window.pageYOffset / scrollable : 0;
+        scrollProgress.style.transform = `scaleX(${progress})`;
+    }
+}
+
+window.addEventListener('scroll', () => {
+    if (!scrollTicking) {
+        scrollTicking = true;
+        requestAnimationFrame(() => {
+            onScroll();
+            scrollTicking = false;
+        });
+    }
 });
+onScroll();
 
-// Fade in animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
+// Scroll-reveal animations
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
         }
     });
-}, observerOptions);
-
-document.querySelectorAll('.fade-in').forEach(el => {
-    observer.observe(el);
+}, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
 });
 
-// Content blocks fade in
-document.querySelectorAll('.content-block').forEach((el, index) => {
-    el.classList.add('fade-in');
-    el.style.transitionDelay = `${index * 0.05}s`;
-    observer.observe(el);
+// Reveal targets, staggered per section so delays reset for each group
+document.querySelectorAll('section').forEach(section => {
+    const targets = section.querySelectorAll(
+        '.section-header, .content-block, .card, .skill-category, .profile-section, .footer-links, .ext-card'
+    );
+    targets.forEach((el, index) => {
+        el.classList.add('fade-in');
+        el.style.setProperty('--reveal-delay', `${Math.min(index * 0.08, 0.4)}s`);
+        observer.observe(el);
+    });
 });
 
 // Auto-focus terminal on page load
